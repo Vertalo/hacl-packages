@@ -23,8 +23,8 @@
  */
 
 
-#ifndef __internal_Hacl_SHA3_H
-#define __internal_Hacl_SHA3_H
+#ifndef __internal_Hacl_HMAC_H
+#define __internal_Hacl_HMAC_H
 
 #if defined(__cplusplus)
 extern "C" {
@@ -36,15 +36,20 @@ extern "C" {
 #include "krml/internal/target.h"
 
 #include "internal/Hacl_Krmllib.h"
-#include "../Hacl_SHA3.h"
+#include "internal/Hacl_Hash_SHA2.h"
+#include "internal/Hacl_Hash_SHA1.h"
+#include "../Hacl_HMAC.h"
 
-void Hacl_Impl_SHA3_state_permute(uint64_t *s);
-
-void Hacl_Impl_SHA3_loadState(uint32_t rateInBytes, uint8_t *input, uint64_t *s);
+typedef struct K___uint32_t_uint32_t_s
+{
+  uint32_t fst;
+  uint32_t snd;
+}
+K___uint32_t_uint32_t;
 
 #if defined(__cplusplus)
 }
 #endif
 
-#define __internal_Hacl_SHA3_H_DEFINED
+#define __internal_Hacl_HMAC_H_DEFINED
 #endif
